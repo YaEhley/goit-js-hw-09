@@ -8,11 +8,11 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
     e.preventDefault();
-    const name = form.elements.name.value;
+    const email = form.elements.email.value;
     const message = form.elements.message.value;
 
     const data = {
-        name,
+        email,
         message,
     };
 
@@ -23,11 +23,11 @@ function onFormSubmit(e) {
 }
 
 function onFormInput() {
-    const name = form.elements.name.value;
+    const email = form.elements.email.value;
     const message = form.elements.message.value;
 
     const data = {
-        name,
+        email,
         message,
     };
 
@@ -50,7 +50,7 @@ function loadFromLs(key) {
 
 function init() {
     const data = loadFromLs(STORAGE_KEY) || {};
-    form.elements.name.value = data.name || "";
+    form.elements.email.value = data.email || "";
     form.elements.message.value = data.message || "";
 }
 

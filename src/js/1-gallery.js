@@ -91,6 +91,7 @@ imagesTemplates()
 const options = {
   captions: true,
   captionSelector: 'img',
+  captionDelay: 250,
   captionType: 'attr',
   captionsData: 'alt',
   captionPosition: 'bottom',
