@@ -8,8 +8,8 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
     e.preventDefault();
-    const email = form.elements.email.value;
-    const message = form.elements.message.value;
+    const email = form.elements.email.value.trim();
+    const message = form.elements.message.value.trim();
 
     const data = {
         email,
@@ -23,8 +23,8 @@ function onFormSubmit(e) {
 }
 
 function onFormInput() {
-    const email = form.elements.email.value;
-    const message = form.elements.message.value;
+    const email = form.elements.email.value.trim();
+    const message = form.elements.message.value.trim();
 
     const data = {
         email,
@@ -41,9 +41,14 @@ function saveTols(key, value) {
 
 function loadFromLs(key) {
     const zip = localStorage.getItem(key);
-    try {
+    // try {
+    //     return JSON.parse(zip);
+    // } catch {
+    //     return zip;
+    // }
+    if (zip !== null) {
         return JSON.parse(zip);
-    } catch {
+    } else {
         return zip;
     }
 }
