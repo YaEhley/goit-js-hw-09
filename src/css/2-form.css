@@ -1,0 +1,31 @@
+.feedback-form {
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button-submit {
+    position: absolute;
+    left: 100%;
+    transform: translate(-100%, 0%);
+}
+
+.feedback-form>label {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    font: inherit;
+    padding: 8px;
+}
+
+.feedback-form textarea {
+    resize: none;
+}
