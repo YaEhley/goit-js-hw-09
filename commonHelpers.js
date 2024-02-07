@@ -10,5 +10,5 @@ import"./assets/modulepreload-polyfill-3cfb730f.js";import{S as t}from"./assets/
                     </a>
                  </li>`).join(`
 
-`);a.innerHTML=i}n();const e={captions:!0,captionSelector:"img",captionType:"attr",captionsData:"alt",captionPosition:"bottom",animation:250},c=new t(".gallery a",e);c.on("show.simplelightbox");
+`);a.innerHTML=i}n();const e={captions:!0,captionSelector:"img",captionDelay:250,captionType:"attr",captionsData:"alt",captionPosition:"bottom",animation:250},c=new t(".gallery a",e);c.on("show.simplelightbox");
 //# sourceMappingURL=commonHelpers.js.map
