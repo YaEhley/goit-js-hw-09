@@ -78,25 +78,27 @@ function imagesTemplates() {
                             src="${image.preview}"
                             data-source="${image.original}"
                             alt="${image.description}"
-                            style="width: 360px; height: 200px;"
                         />
                     </a>
                  </li>`;
     }).join("\n\n");
 
-   container.innerHTML = result;
+  container.innerHTML = result;
+  
+  const galleryImages = document.querySelectorAll('.gallery-image');
+    galleryImages.forEach(image => {
+        image.style.width = '360px';
+        image.style.height = '200px';
+    });
 }
+
 imagesTemplates() 
 
 const options = {
-  captions: true,
-  captionSelector: 'img',
   captionDelay: 250,
-  captionType: 'attr',
   captionsData: 'alt',
-  captionPosition: 'bottom',
-  animation: 250,
 };
 
 const lightbox = new SimpleLightbox('.gallery a', options);
-lightbox.on('show.simplelightbox');
+
+

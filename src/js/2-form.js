@@ -31,10 +31,10 @@ function onFormInput() {
         message,
     };
 
-    saveTols(STORAGE_KEY, data);
+    saveToLocalStorage(STORAGE_KEY, data);
 }
 
-function saveTols(key, value) {
+function saveToLocalStorage(key, value) {
     const zip = JSON.stringify(value);
     localStorage.setItem(key, zip);
 }
